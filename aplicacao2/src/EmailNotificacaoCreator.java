@@ -1,0 +1,6 @@
+public class EmailNotificacaoCreator extends NotificacaoCreator {
+    @Override
+    public Notificacao criarNotificacao() {
+        return new EmailNotificacao();
+    }
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="Aplicacao2" id="aplicacao2">
+    <mxGraphModel dx="1422" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="100" value="Aplicacao 2 - Factory Method (Notificacoes + WhatsApp via OCP)" style="text;html=1;align=center;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="760" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="6" value="&lt;i&gt;«abstract»&lt;/i&gt;&lt;br&gt;&lt;b&gt;NotificacaoCreator&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ &lt;i&gt;criarNotificacao(): Notificacao&lt;/i&gt;&lt;br&gt;+ enviarNotificacao(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="400" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="2" value="&lt;i&gt;«interface»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Notificacao&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ enviar(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="780" y="80" width="320" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="7" value="&lt;b&gt;EmailNotificacaoCreator&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ criarNotificacao(): Notificacao" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="3" value="&lt;b&gt;EmailNotificacao&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ enviar(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="780" y="280" width="320" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="8" value="&lt;b&gt;SmsNotificacaoCreator&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ criarNotificacao(): Notificacao" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="80" y="390" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="4" value="&lt;b&gt;SmsNotificacao&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ enviar(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="780" y="390" width="320" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="9" value="&lt;b&gt;PushNotificacaoCreator&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ criarNotificacao(): Notificacao" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="80" y="500" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="5" value="&lt;b&gt;PushNotificacao&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ enviar(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="780" y="500" width="320" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="13" value="&lt;b&gt;WhatsAppNotificacaoCreator&lt;/b&gt; &lt;i&gt;(NOVO)&lt;/i&gt;&lt;br&gt;___________________&lt;br&gt;+ criarNotificacao(): Notificacao" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#a8e6a3;strokeColor=#2d7a2d;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="610" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="12" value="&lt;b&gt;WhatsAppNotificacao&lt;/b&gt; &lt;i&gt;(NOVO)&lt;/i&gt;&lt;br&gt;___________________&lt;br&gt;+ enviar(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#a8e6a3;strokeColor=#2d7a2d;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="780" y="610" width="320" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="10" value="&lt;b&gt;Aplicacao&lt;/b&gt; (Cliente original)&lt;br&gt;___________________&lt;br&gt;# creator: NotificacaoCreator&lt;br&gt;___________________&lt;br&gt;+ initialize(canal: String): void&lt;br&gt;+ enviar(mensagem: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="80" y="760" width="400" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="14" value="&lt;b&gt;AplicacaoComWhatsApp&lt;/b&gt; &lt;i&gt;(NOVO)&lt;/i&gt;&lt;br&gt;___________________&lt;br&gt;+ initialize(canal: String): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#a8e6a3;strokeColor=#2d7a2d;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="940" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="11" value="&lt;b&gt;Main&lt;/b&gt;&lt;br&gt;___________________&lt;br&gt;+ main(args: String[]): void" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="780" y="760" width="320" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="15" value="OCP: classes em verde foram ADICIONADAS.&lt;br&gt;Nenhuma classe existente foi modificada." style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#fff8dc;strokeColor=#aaaa00;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="780" y="900" width="320" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="20" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;endSize=14;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;endSize=14;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.4;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;endSize=14;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="40" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;endSize=14;strokeColor=#2d7a2d;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="23" style="endArrow=block;endFill=0;html=1;rounded=0;endSize=14;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" style="endArrow=block;endFill=0;html=1;rounded=0;endSize=14;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.4;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" style="endArrow=block;endFill=0;html=1;rounded=0;endSize=14;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="41" style="endArrow=block;endFill=0;html=1;rounded=0;endSize=14;strokeColor=#2d7a2d;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="26" value="«create»" style="endArrow=open;html=1;rounded=0;dashed=1;endSize=10;fontSize=10;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="«create»" style="endArrow=open;html=1;rounded=0;dashed=1;endSize=10;fontSize=10;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="«create»" style="endArrow=open;html=1;rounded=0;dashed=1;endSize=10;fontSize=10;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="«create»" style="endArrow=open;html=1;rounded=0;dashed=1;endSize=10;fontSize=10;strokeColor=#2d7a2d;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="30" value="«use»" style="endArrow=open;html=1;rounded=0;dashed=1;endSize=10;fontSize=10;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="29" value="creator" style="endArrow=open;html=1;rounded=0;endSize=10;fontSize=10;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="10" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="43" value="extends" style="endArrow=block;endFill=0;html=1;rounded=0;endSize=14;strokeColor=#2d7a2d;fontSize=10;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="14" target="10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="31" style="endArrow=open;html=1;rounded=0;dashed=1;endSize=10;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="11" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
